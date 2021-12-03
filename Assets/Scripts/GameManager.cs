@@ -6,13 +6,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     
-    int totalCount = 0;
-    int areaCount = 0;
+    public int totalCount{get; private set;}
+    public int areaCount{get; private set;}
 
     private void Awake() {
         if(instance == null)
             instance = this;
 
+        totalCount = 0;
+        areaCount = 0;
+        
         DontDestroyOnLoad(gameObject);
     }
 
