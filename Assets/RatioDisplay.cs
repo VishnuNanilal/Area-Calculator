@@ -7,6 +7,6 @@ public class RatioDisplay : MonoBehaviour
 
     private void Update() 
     {
-        text.text = GameManager.instance.areaCount + " / " + GameManager.instance.totalCount;
+        text.text = GameManager.instance.GetAreaCount() + " / "+ GameManager.instance.GetTotalCount();
     }
 }

@@ -11,8 +11,8 @@ public class BallTrigger : MonoBehaviour
         if(other.gameObject.tag != "Ball") return;
 
         if(containerPrefab != null)
-            GameManager.instance.AddToTotal();
+            GameManager.instance.AddToTotalCount();
         else
-            GameManager.instance.AddToArea();
+            GameManager.instance.AddToAreaCount();
     }
 }
