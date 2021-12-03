@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412144993568434302}
+  - component: {fileID: 5122771105138783962}
   m_Layer: 0
   m_Name: Ball Emitter
   m_TagString: Untagged
@@ -32,6 +33,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5122771105138783962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412144993568434301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5864c3e02ea7a4d4583824dc5714f28d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitPrefab: {fileID: 2588843408634945253, guid: 9a36235a89d25ad49bc28d9558e789ee, type: 3}
+  emitArea: 1
+  positionChangeSpeed: 2
+  emitDelay: 0.25
 --- !u!1 &6796859181299597563
 GameObject:
   m_ObjectHideFlags: 0
