@@ -28,11 +28,13 @@ public class BallEmitter : MonoBehaviour
             RandomX = Random.Range(-emitArea, emitArea);
             RandomZ = Random.Range(-emitArea, emitArea);
             Vector3 newPosition = new Vector3(RandomX, transform.position.y, RandomZ);
+            Color newColor = new Color(RandomX, Random.Range(-emitArea, emitArea), RandomZ);
 
             yield return new WaitForSeconds(1/positionChangeSpeed); // As we increase speed, the time for the next position change decreases.
             transform.position = newPosition;
             yield return new WaitForSeconds(emitDelay);
-            Instantiate(emitPrefab, newPosition, Quaternion.identity);
+            GameObject ball = Instantiate(emitPrefab, newPosition, Quaternion.identity);
+            ball.GetComponent<Renderer>().material.color = newColor;
         }
     }
 }

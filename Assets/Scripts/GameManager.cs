@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
+
+    [SerializeField] protected GameObject[] shapes;
+    [SerializeField] float baseBoxSize = 2f;
     
     int totalCount{get; set;}
     int areaCount{get; set;}
@@ -17,18 +20,9 @@ public class GameManager : MonoBehaviour
 
         totalCount = 0;
         areaCount = 0;
-        CalculateBaseBoxArea();
+        baseBoxArea = baseBoxSize*baseBoxSize;
 
         DontDestroyOnLoad(gameObject);
-    }
-
-    private void CalculateBaseBoxArea()
-    {
-        GameObject baseBox_GO = GameObject.FindGameObjectWithTag("BaseBox");
-        float baseBoxX = baseBox_GO.transform.localScale.x;
-        float baseBoxZ = baseBox_GO.transform.localScale.z;
-
-        baseBoxArea = baseBoxX * baseBoxZ;
     }
 
     public void AddToTotalCount()
@@ -68,7 +62,7 @@ public class GameManager : MonoBehaviour
         if(totalCount == 0) return 0f;
 
         float ratio = (float)areaCount / totalCount;
+        print(ratio);
         return ratio*baseBoxArea;
     }
-    
 }
