@@ -2931,6 +2931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Container
       objectReference: {fileID: 0}
+    - target: {fileID: 4076647325268240756, guid: 5f2540968aa06304e9de5a4abb0508dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4076647325268240759, guid: 5f2540968aa06304e9de5a4abb0508dc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2974,10 +2978,6 @@ PrefabInstance:
     - target: {fileID: 4076647325268240759, guid: 5f2540968aa06304e9de5a4abb0508dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7769130312064061127, guid: 5f2540968aa06304e9de5a4abb0508dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f2540968aa06304e9de5a4abb0508dc, type: 3}
