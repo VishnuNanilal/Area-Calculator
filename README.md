@@ -14,7 +14,7 @@ After sufficient iterations a ratio of the balls fallen within the unknown area 
                      Area of the unknown shape = (no. of balls in unknown area / no. of balls in known area) * Area of the known shape
 
 Additional to these, the following are also present:
-> 2 Displays which show the current ratio and the calculated area 
-> 3 Buttons to start, pause and reset the experiment
-> Two other known areas, a smaller square and a circle, to verify the experiment and can be cycled through using 2 buttons. 
-> A slider to control the speed of ball spawning
+- Two Displays which show the current ratio and the calculated area 
+- Three Buttons to start, pause and reset the experiment
+- Two other known areas, a smaller square and a circle, to verify the experiment and can be cycled through using 2 buttons. 
+- A slider to control the speed of ball spawning
