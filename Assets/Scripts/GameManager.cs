@@ -49,13 +49,8 @@ public class GameManager : MonoBehaviour
             Destroy(ball.gameObject);
 
         totalCount = 0;
-        print("totalcount after Reset"+totalCount);
         areaCount = 0;
-        print("areacount after Reset" + areaCount);
         FindObjectOfType<BallEmitter>().StopSystem();
-        print("totalcount after Reset" + totalCount);
-        print("areacount after Reset" + areaCount);
-        
     }
 
     public int GetTotalCount()

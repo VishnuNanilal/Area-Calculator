@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 1694563402213686951}
   - component: {fileID: 9203957120820565980}
   - component: {fileID: 3403903050227348300}
+  - component: {fileID: 1041933761}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -154,8 +155,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8976998477427781624}
   m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.224, z: -0}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
+  m_LocalPosition: {x: 0.0022, y: 0.219, z: -0.0014}
+  m_LocalScale: {x: 97.87929, y: 98.00903, z: 13.2}
   m_Children: []
   m_Father: {fileID: 4608744444784837253}
   m_RootOrder: 1
@@ -182,3 +183,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 801778243983680979, guid: 7926280afe4d29948a5b52dc285b7ddd, type: 3}
+--- !u!114 &1041933761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8976998477427781624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f3fe46de9ebf43946a13af04d9abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containerPrefab: {fileID: 0}
