@@ -70,10 +70,4 @@ public class GameManager : MonoBehaviour
         float ratio = (float)areaCount / totalCount;
         return ratio*baseBoxArea;
     }
-    
-    private void Update() 
-    {
-        //print(areaCount);
-        //print(totalCount);
-    }
 }

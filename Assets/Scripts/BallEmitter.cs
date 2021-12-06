@@ -8,8 +8,11 @@ public class BallEmitter : MonoBehaviour
     [SerializeField] float emitArea = 0f;
     [SerializeField] float maxPositionChangeSpeed = 1f;
     [SerializeField] float emitDelay = 0f;
+    float maxAllowedBalls = 1500;
 
+    bool isRunning = false;
     float positionChangeSpeed = 0f;
+    AudioSource audioSource;
 
     //UI
     [SerializeField] GameObject sliderPrefab;
@@ -17,21 +20,30 @@ public class BallEmitter : MonoBehaviour
 
     private void Awake() {
         speedSlider = sliderPrefab.GetComponent<Slider>();  
+        audioSource = GetComponent<AudioSource>();
     }
 
-    private void Update() 
+    private void Update() {
+        if(GameManager.instance.GetTotalCount() > maxAllowedBalls)
+            StopSystem();
+    }
+
+    private void FixedUpdate() 
     {
         positionChangeSpeed = speedSlider.value * maxPositionChangeSpeed;
     }
 
     public void StartSystem()
     {
+        if(isRunning) return;
         StartCoroutine(StartEmission());
+        isRunning = true;
     }
 
     public void StopSystem()
     {
         StopAllCoroutines();
+        isRunning = false;
     }
 
     private IEnumerator StartEmission()
@@ -52,6 +64,7 @@ public class BallEmitter : MonoBehaviour
             transform.position = newPosition;
             yield return new WaitForSeconds(emitDelay);
             GameObject ball = Instantiate(emitPrefab, newPosition, Quaternion.identity);
+            audioSource.Play();
             ball.GetComponent<Renderer>().material.color = Color.white;
             //ball.GetComponent<Renderer>().material.color = new Color(RandomX, Random.Range(-emitArea, emitArea), RandomZ);
         }
